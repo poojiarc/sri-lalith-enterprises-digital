@@ -220,6 +220,8 @@ const navigation = [
   { name: "Contact Us", href: "/contact" },
 ];
 
+const HEADER_HEIGHT = "h-[88px]"; // 👈 fixed height
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -238,38 +240,38 @@ const Header = () => {
   }, [location]);
 
   const isActive = (href: string) =>
-    href === "/" ? location.pathname === "/" : location.pathname.startsWith(href);
+    href === "/"
+      ? location.pathname === "/"
+      : location.pathname.startsWith(href);
 
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 flex items-center transition-all duration-300",
+        HEADER_HEIGHT,
         isScrolled
-          ? "bg-brand-black/95 backdrop-blur-lg shadow-lg py-2"
-          : "bg-brand-black py-4"
+          ? "bg-brand-black/95 backdrop-blur-lg shadow-lg"
+          : "bg-brand-black"
       )}
     >
-      <div className="section-container">
+      <div className="section-container w-full">
         <nav className="flex items-center justify-between">
           {/* LOGO */}
-         {/* Logo */}
-<Link to="/" className="flex items-center gap-3 group">
-  <img
-  src={logo}
-  alt="Sri Lalith Enterprises Logo"
-  className="w-12 h-12 object-contain transition-transform duration-300 group-hover:scale-110"
-/>
-
-  <div className="hidden sm:block">
-    <h1 className="text-lg font-bold text-white leading-tight">
-      Sri Lalith Enterprises
-    </h1>
-    <p className="text-xs text-muted-foreground">
-      Packaging & Tape Solutions
-    </p>
-  </div>
-</Link>
-
+          <Link to="/" className="flex items-center gap-3 group">
+            <img
+              src={logo}
+              alt="Sri Lalith Enterprises Logo"
+              className="w-12 h-12 object-contain transition-transform duration-300 group-hover:scale-110"
+            />
+            <div className="hidden sm:block">
+              <h1 className="text-lg font-bold text-white leading-tight">
+                Sri Lalith Enterprises
+              </h1>
+              <p className="text-xs text-muted-foreground">
+                Packaging & Tape Solutions
+              </p>
+            </div>
+          </Link>
 
           {/* DESKTOP NAV */}
           <div className="hidden lg:flex items-center gap-1">
