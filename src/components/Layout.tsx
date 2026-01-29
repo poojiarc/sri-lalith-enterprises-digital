@@ -41,8 +41,8 @@ const Layout = ({ children }: LayoutProps) => {
     <div className="min-h-screen flex flex-col">
       <Header />
 
-      {/* MAIN CONTENT OFFSET FOR FIXED HEADER */}
-      <main className="flex-1 pt-[88px] lg:pt-[88px]">
+      {/* NO padding-top here */}
+      <main className="flex-1">
         {children}
       </main>
 
