@@ -265,7 +265,7 @@ const Index = () => {
               to="/contact"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
-              Get a Quote
+              Contact us
               <ArrowRight className="w-5 h-5" />
             </Link>
             <a

@@ -120,7 +120,7 @@ const Products = () => {
             href="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-white text-primary font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
           >
-            Request a Quote
+            Contact us
           </a>
         </div>
       </section>
