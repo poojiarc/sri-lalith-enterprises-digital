@@ -95,13 +95,18 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center hero-gradient overflow-hidden">
         <ParticleBackground />
-        <div className="section-container relative z-10">
+        <div className="section-container relative z-10 w-full">
+          
+          {/* UPDATED: Container for centering the badge across the full width */}
+          <div className="flex justify-center w-full mb-8 mt-12 lg:mt-6">
+            <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-medium border border-primary/20 backdrop-blur-sm animate-fade-in">
+              🏭 Trusted Manufacturer Since 2014
+            </span>
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Hero Content */}
-            <div className="space-y-8 animate-fade-in">
-              <span className="inline-block px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-medium">
-                🏭 Trusted Manufacturer Since 2014
-              </span>
+            <div className="space-y-6 animate-fade-in">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Premium <span className="text-gradient">Packaging</span> Solutions for Your Business
               </h1>
@@ -122,7 +127,7 @@ const Index = () => {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 pt-4">
                 <Link
                   to="/contact"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-green-gradient text-white font-semibold rounded-xl shadow-glow-green hover:shadow-lg transition-all duration-300 hover:scale-105"
